@@ -5,11 +5,11 @@ public class DTelo extends Delnik {
     private final int Pocet_Plastu =50;
     @Override
     public void run() {
-        while (true) {
-            System.out.println("Výrobce těla " + super.getName1() + " vyrábí tělo");
+        while (super.getSkladSoucastek().getPanenka()<10) {
+            System.out.println("Výrobce " + super.getName1() + " vyrábí tělo");
             if (super.getSklad().uberPlast(Pocet_Plastu)) {
                 super.getSkladSoucastek().VytvorTelo();
-                System.out.println("Výrobce těla "+super.getName1()+ "Dokončil tělo");
+                System.out.println("Výrobce "+super.getName1()+ " Dokončil tělo");
             } else {
                 System.out.println("Výrobce těl čeká na Materiál");
                 try {

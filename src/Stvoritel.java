@@ -6,10 +6,10 @@ public class Stvoritel extends Delnik {
 
     @Override
     public void run() {
-        while (true) {
+        while (super.getSkladSoucastek().getPanenka()<10) {
             System.out.println("Stvoritel " + super.getName1() + " vyrábí Panenku");
             if (super.getSkladSoucastek().Vytvorpanenku()) {
-                System.out.println("Stvoritel "+super.getName1()+ "Dokončil Panenku");
+                System.out.println("Stvoritel "+super.getName1()+ " Dokončil Panenku");
             } else {
                 System.out.println("Stvoritel čeká na Součástky");
                 try {

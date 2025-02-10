@@ -7,11 +7,11 @@ public class DHlava extends Delnik {
 
     @Override
     public void run() {
-        while (true) {
-            System.out.println("Výrobce hlav " + super.getName1() + " vyrábí hlavy");
+        while (super.getSkladSoucastek().getPanenka()<10) {
+            System.out.println("Výrobce " + super.getName1() + " vyrábí hlavy");
             if (super.getSklad().uberPlast(Pocet_Plastu) && getSklad().uberVlasy(Pocet_Vlasu)) {
                 super.getSkladSoucastek().VytvorHlavu();
-                System.out.println("Výrobce hlav "+super.getName1()+ "Dokončil hlavu");
+                System.out.println("Výrobce "+super.getName1()+ " Dokončil hlavu");
             } else {
                 System.out.println("Výrobce hlav čeká na Materiál");
                 try {

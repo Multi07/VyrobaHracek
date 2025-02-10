@@ -1,9 +1,9 @@
 public class SkladSoucastek {
-    private int hlava;
-    private int telo;
-    private int ruka;
-    private int noha;
-    private int panenka;
+    private int hlava =0;
+    private int telo=0;
+    private int ruka=0;
+    private int noha=0;
+    private int panenka=0;
 
     public String VytvorHlavu() {
         hlava++;
@@ -19,14 +19,18 @@ public class SkladSoucastek {
         noha++;
     }
     public synchronized boolean Vytvorpanenku() {
-        if (hlava >=1 && telo >=1 && ruka >=2 && noha >=2) {
+        if (hlava >=1 && telo >=1 && ruka >=1 && noha >=1) {
             hlava--;
             telo--;
-            ruka-=2;
-            noha-=2;
+            ruka--;
+            noha--;
             panenka++;
             return true;
         }
         return false;
+    }
+
+    public int getPanenka() {
+        return panenka;
     }
 }

@@ -6,11 +6,11 @@ public class DNohy extends Delnik {
 
     @Override
     public void run() {
-        while (true) {
-            System.out.println("Výrobce nohou " + super.getName1() + " vyrábí nohu");
+        while (super.getSkladSoucastek().getPanenka()<10) {
+            System.out.println("Výrobce " + super.getName1() + " vyrábí nohu");
             if (super.getSklad().uberPlast(Pocet_Plastu)) {
                 super.getSkladSoucastek().VytvorNoha();
-                System.out.println("Výrobce nouhou "+super.getName1()+ "Dokončil nohu");
+                System.out.println("Výrobce "+super.getName1()+ " Dokončil nohu");
             } else {
                 System.out.println("Výrobce nouhou čeká na Materiál");
                 try {
