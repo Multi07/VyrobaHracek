@@ -18,7 +18,9 @@ public class Skladnik extends Delnik {
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
+            System.out.println("--------------------------------------------------------");
             System.out.println("Skladník " + super.getName1() + " se vrátil s materiálem");
+            System.out.println("--------------------------------------------------------");
             super.getSklad().pridejPlast(rand_int1);
             super.getSklad().pridejVlasy(rand_int2);
         }

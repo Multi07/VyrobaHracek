@@ -9,7 +9,9 @@ public class Stvoritel extends Delnik {
         while (super.getSkladSoucastek().getPanenka()<10) {
             System.out.println("Stvoritel " + super.getName1() + " vyrábí Panenku");
             if (super.getSkladSoucastek().Vytvorpanenku()) {
+                System.out.println("------------------------------------------------");
                 System.out.println("Stvoritel "+super.getName1()+ " Dokončil Panenku");
+                System.out.println("------------------------------------------------");
             } else {
                 System.out.println("Stvoritel čeká na Součástky");
                 try {
